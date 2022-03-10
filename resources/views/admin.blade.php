@@ -7,31 +7,31 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
-<link rel="stylesheet" href="public/Backend/css/bootstrap.min.css" >
+<link rel="stylesheet" href="{{asset('public/Backend/css/bootstrap.min.css')}}" >
 <!-- //bootstrap-css -->
 <!-- Custom CSS -->
-<link href="public/Backend/css/style.css" rel='stylesheet' type='text/css' />
-<link href="public/Backend/css/style-responsive.css" rel="stylesheet"/>
+<link href="{{asset('public/Backend/css/style.css')}}" rel='stylesheet' type='text/css' />
+<link href="{{asset('public/Backend/css/style-responsive.css')}}" rel="stylesheet"/>
 <!-- font CSS -->
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <!-- font-awesome icons -->
-<link rel="stylesheet" href="public/Backend/css/font.css" type="text/css"/>
-<link href="public/Backend/css/font-awesome.css" rel="stylesheet"> 
-<link rel="stylesheet" href="public/Backend/css/morris.css" type="text/css"/>
+<link rel="stylesheet" href="{{asset('public/Backend/css/font.css')}}" type="text/css"/>
+<link href="{{asset('public/Backend/css/font-awesome.css')}}" rel="stylesheet"> 
+<link rel="stylesheet" href="{{asset('public/Backend/css/morris.css')}}" type="text/css"/>
 <!-- calendar -->
-<link rel="stylesheet" href="public/Backend/css/monthly.css">
+<link rel="stylesheet" href="{{asset('public/Backend/css/monthly.css')}}">
 <!-- //calendar -->
 <!-- //font-awesome icons -->
-<script src="public/Backend/js/jquery2.0.3.min.js"></script>
-<script src="public/Backend/js/raphael-min.js"></script>
-<script src="public/Backend/js/morris.js"></script>
+<script src="{{asset('public/Backend/js/jquery2.0.3.min.js')}}"></script>
+<script src="{{asset('public/Backend/js/raphael-min.js')}}"></script>
+<script src="{{asset('public/Backend/js/morris.js')}}"></script>
 </head>
 <body>
 <section id="container">
 <!--header start-->
 <header class="header fixed-top clearfix">
 <!--logo start-->
-<div class="brand">
+<div class="material">
     <a href="index.html" class="logo">
         JTshop
     </a>
@@ -96,6 +96,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
 						<li><a href="{{URL::to('/add-category-product')}}">Thêm Danh Mục Sản Phẩm</a></li>
 						<li><a href="{{URL::to('/all-category-product')}}">LiệT Kê Danh Mục Sản Phẩm</a></li>
+                       
+                    </ul>
+                </li>
+
+				<li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Chẩt Liệu Sản phẩm</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/add-material-product')}}">Thêm Chất Liệu Sản Phẩm</a></li>
+						<li><a href="{{URL::to('/all-material-product')}}">LiệT Kê Chất Liệu Sản Phẩm</a></li>
+                       
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Sản phẩm</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/add-product')}}">Thêm Sản Phẩm</a></li>
+						<li><a href="{{URL::to('/all-product')}}">LiệT Kê Sản Phẩm</a></li>
                        
                     </ul>
                 </li>

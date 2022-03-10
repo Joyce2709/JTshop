@@ -3,7 +3,7 @@
 <div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-      Liệt Kê Danh Mục Sản Phẩm
+      Liệt Kê Chất Liệu Sản Phẩm
     </div>
     <!-- <div class="row w3-res-tb">
       <div class="col-sm-5 m-b-xs">
@@ -35,28 +35,28 @@
                 <input type="checkbox"><i></i>
               </label>
             </th>
-            <th>Tên Danh Mục</th>
+            <th>Tên Chất Liệu</th>
             <th>Hiển Thị</th>
             <th>Ngày Thêm</th>
             <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
-          @foreach($all_category_product as $key => $cate_pro)
+          @foreach($all_material_product as $key => $cate_pro)
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-            <td>{{$cate_pro->category_name}}</td>
+            <td>{{$cate_pro->material_name}}</td>
             <td><span class="text-ellipsis">
               <?php
-                if($cate_pro->category_status == 0){
+                if($cate_pro->material_status == 0){
                   ?>
-                <a href="{{URL::to('/unactive-category-product/'.$cate_pro->category_id)}}">
+                <a href="{{URL::to('/unactive-material-product/'.$cate_pro->material_id)}}">
                 <span>Ẩn</span></a>
                 <?php
                 }
                 else{
                   ?>
-                  <a href="{{URL::to('/active-category-product/'.$cate_pro->category_id)}}">
+                  <a href="{{URL::to('/active-material-product/'.$cate_pro->material_id)}}">
                   <span>Hiện</span></a>
                   <?php
                 }
@@ -64,11 +64,11 @@
             </span></td>
             <td><span class="text-ellipsis"></span></td>
             <td>
-              <a href="{{URL::to('/edit-category-product/'.$cate_pro->category_id)}}"
+              <a href="{{URL::to('/edit-material-product/'.$cate_pro->material_id)}}"
               class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-pencil-square-o text-success text-active"></i>
               </a> 
-              <a onclick="return confirm('Bạn chắc chưa ?')" href="{{URL::to('/delete-category-product/'.$cate_pro->category_id)}}" 
+              <a onclick="return confirm('Bạn chắc chưa ?')" href="{{URL::to('/delete-material-product/'.$cate_pro->material_id)}}" 
               class="active styling-delete" ui-toggle-class="">
                 <i class="fa fa-times text-danger text"></i>
               </a>
