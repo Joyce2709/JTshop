@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryProduct;
 use App\Http\Controllers\MaterialProduct;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,3 +54,11 @@ Route::get('/unactive-product/{product_id}',[ProductController::class,'unactive_
 Route::get('/active-product/{product_id}',[ProductController::class,'active_product']);
 Route::post('/save-product',[ProductController::class,'save_product']);
 Route::post('/update-product/{product_id}',[ProductController::class,'update_product']);
+
+//Danh muc san pham trang chu
+Route::get('/danh-muc-san-pham/{category_id}',[CategoryProduct::class,'show_category_home']);
+Route::get('/chat-lieu-san-pham/{material_id}',[MaterialProduct::class,'show_material_home']);
+Route::get('/chi-tiet-san-pham/{product_id}',[ProductController::class,'details_product']);
+
+//cart
+Route::post('/save-cart',[CartController::class,'save_cart']);

@@ -6,27 +6,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>aranoz</title>
-    <link rel="icon" href="{{'public/Frontend/img/favicon.png'}}">
+    <link rel="icon" href="{{asset('public/Frontend/img/favicon.png')}}">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{'public/Frontend/css/bootstrap.min.css'}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/bootstrap.min.css')}}">
     <!-- animate CSS -->
-    <link rel="stylesheet" href="{{'public/Frontend/css/animate.css'}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/animate.css')}}">
     <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="{{'public/Frontend/css/owl.carousel.min.css'}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/owl.carousel.min.css')}}">
     <!-- nice select CSS -->
-    <link rel="stylesheet" href="{{'public/Frontend/css/nice-select.css'}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/nice-select.css')}}">
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="{{'public/Frontend/css/all.css'}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/all.css')}}">
     <!-- flaticon CSS -->
-    <link rel="stylesheet" href="{{'public/Frontend/css/flaticon.css'}}">
-    <link rel="stylesheet" href="{{'public/Frontend/css/themify-icons.css'}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/themify-icons.css')}}">
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="{{'public/Frontend/css/magnific-popup.css'}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/magnific-popup.css')}}">
     <!-- swiper CSS -->
-    <link rel="stylesheet" href="{{'public/Frontend/css/slick.css'}}">
-    <link rel="stylesheet" href="{{'public/Frontend/css/price_rangs.css'}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/price_rangs.css')}}">
     <!-- style CSS -->
-    <link rel="stylesheet" href="{{'public/Frontend/css/style.css'}}">
+    <link rel="stylesheet" href="{{asset('public/Frontend/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/lightslider.min.css')}}">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.php"> <img src="public/Frontend/img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="index.php"> <img src="{{asset('public/Frontend/img/logo.png')}}" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -46,20 +47,31 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{URL::to('/trang-chu')}}">Home</a>
+                                    <a class="nav-link" href="{{URL::to('/trang-chu')}}">Trang Chủ</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.php" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Shop
+                                        Sản Phẩm
                                     </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
                                         <a class="dropdown-item" href="category.php"> shop category</a>
                                         <a class="dropdown-item" href="single-product.php">product details</a>
 
-                                    </div>
+                                    </div> -->
                                 </li>
                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.php" id="navbarDropdown_1"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Chất Liệu
+                                    </a>
+                                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                        <a class="dropdown-item" href="category.php"> shop category</a>
+                                        <a class="dropdown-item" href="single-product.php">product details</a>
+
+                                    </div> -->
+                                </li>
+                                <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.php" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         pages
@@ -72,11 +84,11 @@
                                         <a class="dropdown-item" href="confirmation.php">confirmation</a>
                                         <a class="dropdown-item" href="elements.php">elements</a>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.php" id="navbarDropdown_2"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        blog
+                                        Tin Tức
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                                         <a class="dropdown-item" href="blog.php"> blog</a>
@@ -85,7 +97,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.php">Contact</a>
+                                    <a class="nav-link" href="contact.php">Liên Hệ</a>
                                 </li>
                             </ul>
                         </div>
@@ -147,81 +159,31 @@
                     <div class="left_sidebar_area">
                         <aside class="left_widgets p_filter_widgets">
                             <div class="l_w_title">
-                                <h3>Browse Categories</h3>
-                            </div>
+                                <h3>Danh Mục Sản Phẩm</h3>
+                            </div>                            
                             <div class="widgets_inner">
                                 <ul class="list">
+                                @foreach($category as $key => $cate)
                                     <li>
-                                        <a href="#">Frozen Fish</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Dried Fish</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Fresh Fish</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Meat Alternatives</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Fresh Fish</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Meat Alternatives</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Meat</a>
-                                        <span>(250)</span>
-                                    </li>
+                                        <a href="{{URL::to('/danh-muc-san-pham/'.$cate->category_id)}}">{{$cate->category_name}}</a>   
+                                    </li>     
+                                @endforeach                               
                                 </ul>
-                            </div>
+                            </div>   
                         </aside>
-
                         <aside class="left_widgets p_filter_widgets">
                             <div class="l_w_title">
-                                <h3>Product filters</h3>
+                                <h3>Chất Liệu Sản Phẩm</h3>
                             </div>
                             <div class="widgets_inner">
                                 <ul class="list">
+                                @foreach($material as $key => $material)
                                     <li>
-                                        <a href="#">Apple</a>
+                                        <a href="{{URL::to('/chat-lieu-san-pham/'.$material->material_id)}}">{{$material->material_name}}</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Asus</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#">Gionee</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Micromax</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Samsung</a>
-                                    </li>
+                                    @endforeach
                                 </ul>
-                                <ul class="list">
-                                    <li>
-                                        <a href="#">Apple</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Asus</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#">Gionee</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Micromax</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Samsung</a>
-                                    </li>
-                                </ul>
+                                
                             </div>
                         </aside>
 
@@ -417,35 +379,37 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </footer>
     <!--::footer_part end::-->
-
+<!-- swiper js -->
+    <script src="{{asset('public/Frontend/js/lightslider.min.js')}}"></script>
     <!-- jquery plugins here-->
-    <script src="public/Frontend/js/jquery-1.12.1.min.js"></script>
+    <script src="{{asset('public/Frontend/js/jquery-1.12.1.min.js')}}"></script>
     <!-- popper js -->
-    <script src="public/Frontend/js/popper.min.js"></script>
+    <script src="{{asset('public/Frontend/js/popper.min.js')}}"></script>
     <!-- bootstrap js -->
-    <script src="public/Frontend/js/bootstrap.min.js"></script>
+    <script src="{{asset('public/Frontend/js/bootstrap.min.js')}}"></script>
     <!-- easing js -->
-    <script src="public/Frontend/js/jquery.magnific-popup.js"></script>
+    <script src="{{asset('public/Frontend/js/jquery.magnific-popup.js')}}"></script>
     <!-- swiper js -->
-    <script src="public/Frontend/js/swiper.min.js"></script>
+    <script src="{{asset('public/Frontend/js/swiper.min.js')}}"></script>
     <!-- swiper js -->
-    <script src="public/Frontend/js/masonry.pkgd.js"></script>
+    <script src="{{asset('public/Frontend/js/masonry.pkgd.js')}}"></script>
     <!-- particles js -->
-    <script src="public/Frontend/js/owl.carousel.min.js"></script>
-    <script src="public/Frontend/js/jquery.nice-select.min.js"></script>
+    <script src="{{asset('public/Frontend/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/jquery.nice-select.min.js')}}"></script>
     <!-- slick js -->
-    <script src="public/Frontend/js/slick.min.js"></script>
-    <script src="public/Frontend/js/jquery.counterup.min.js"></script>
-    <script src="public/Frontend/js/waypoints.min.js"></script>
-    <script src="public/Frontend/js/contact.js"></script>
-    <script src="public/Frontend/js/jquery.ajaxchimp.min.js"></script>
-    <script src="public/Frontend/js/jquery.form.js"></script>
-    <script src="public/Frontend/js/jquery.validate.min.js"></script>
-    <script src="public/Frontend/js/mail-script.js"></script>
-    <script src="public/Frontend/js/stellar.js"></script>
-    <script src="public/Frontend/js/price_rangs.js"></script>
+    <script src="{{asset('public/Frontend/js/slick.min.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/waypoints.min.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/contact.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/jquery.form.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/mail-script.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/stellar.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/price_rangs.js')}}"></script>
     <!-- custom js -->
-    <script src="public/Frontend/js/custom.js"></script>
+    <script src="{{asset('public/Frontend/js/theme.js')}}"></script>
+    <script src="{{asset('public/Frontend/js/custom.js')}}"></script>
 </body>
 
 </html>
