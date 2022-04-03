@@ -19,7 +19,7 @@
                 <td>
                   <div class="media">
                     <div class="d-flex">
-                      <img src="img/product/single-product/cart-1.jpg" alt="" />
+                      <img src="public/upload/product/feature_441.png" height="150" width="200" alt="" />
                     </div>
                     
                   </div>
@@ -28,9 +28,9 @@
                   <h5>$360.00</h5>
                 </td>
                 <td>
-                  <div class="product_count">
+                <div class="product_count">
                     <span class="input-number-decrement"> <i class="ti-angle-down"></i></span>
-                    <input class="input-number" type="text" value="1" min="0" >
+                    <input class="input-number" type="text" value="1" min="0" max="10">
                     <span class="input-number-increment"> <i class="ti-angle-up"></i></span>
                   </div>
                 </td>
@@ -38,6 +38,7 @@
                   <h5>$720.00</h5>
                 </td>
               </tr>
+
             </tbody>
           </table>
           <div class="checkout_btn_inner float-right">

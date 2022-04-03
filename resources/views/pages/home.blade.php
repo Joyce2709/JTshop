@@ -4,12 +4,23 @@
 <div class="col-lg-4 col-sm-6">
 
     <div class="single_product_item">
-        <img src="{{URL::to('public/upload/product/'.$product->product_image)}}" height="200" width="200" alt="">
-        <div class="single_product_text">
-            <h4>{{$product->product_name}}</h4>
-            <h3>{{number_format($product->product_price,0,',','.').' '.'VNĐ'}}</h3>
-            <input type="button" value="Thêm giỏ hàng" class="btn btn-default add-to-cart" data-id_product="{{$product->product_id}}" name="add-to-cart">
-        </div>
+        <from>
+        @csrf
+            <input type="hidden" value="{{$product->product_id}}" class="cart_product_id_{{$product->product_id}}">
+            <input type="hidden" value="{{$product->product_name}}" class="cart_product_name_{{$product->product_id}}">
+            
+            <input type="hidden" value="{{$product->product_quantity}}" class="cart_product_quantity_{{$product->product_id}}">
+            
+            <input type="hidden" value="{{$product->product_image}}" class="cart_product_image_{{$product->product_id}}">
+            <input type="hidden" value="{{$product->product_price}}" class="cart_product_price_{{$product->product_id}}">
+            <input type="hidden" value="1" class="cart_product_qty_{{$product->product_id}}">
+            <img src="{{URL::to('public/upload/product/'.$product->product_image)}}" height="200" width="200" alt="">
+            <div class="single_product_text">
+                <h4>{{$product->product_name}}</h4>
+                <h3>{{number_format($product->product_price,0,',','.').' '.'VNĐ'}}</h3>
+                <button type="button" name="add-to-cart" class="btn btn-default add-to-cart" data-id_product="{{$product->product_id}}"> Thêm </button>
+            </div>
+        </from>
     </div>
   
 </div>

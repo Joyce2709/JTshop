@@ -54,6 +54,15 @@ Route::get('/unactive-product/{product_id}',[ProductController::class,'unactive_
 Route::get('/active-product/{product_id}',[ProductController::class,'active_product']);
 Route::post('/save-product',[ProductController::class,'save_product']);
 Route::post('/update-product/{product_id}',[ProductController::class,'update_product']);
+//post: bài viết
+Route::get('/add-post',[PostController::class,'add_post']);
+Route::get('/edit-post/{post_id}',[PostController::class,'edit_post']);
+Route::get('/delete-post/{post_id}',[PostController::class,'delete_post']);
+Route::get('/all-post',[PostController::class,'all_post']);
+Route::get('/unactive-post/{post_id}',[PostController::class,'unactive_post']);
+Route::get('/active-post/{post_id}',[PostController::class,'active_post']);
+Route::post('/save-post',[PostController::class,'save_post']);
+Route::post('/update-post/{post_id}',[PostController::class,'update_post']);
 
 //Danh muc san pham trang chu
 Route::get('/danh-muc-san-pham/{category_id}',[CategoryProduct::class,'show_category_home']);
@@ -61,4 +70,13 @@ Route::get('/chat-lieu-san-pham/{material_id}',[MaterialProduct::class,'show_mat
 Route::get('/chi-tiet-san-pham/{product_id}',[ProductController::class,'details_product']);
 
 //cart
+Route::post('/update-cart-quantity',[CartController::class,'update_cart_quantity']);
+Route::post('/update-cart',[CartController::class,'update_cart']);
 Route::post('/save-cart',[CartController::class,'save_cart']);
+Route::post('/add-cart-ajax',[CartController::class,'add_cart_ajax']);
+Route::get('/show-cart',[CartController::class,'show_cart']);
+Route::get('/gio-hang',[CartController::class,'gio_hang']);
+Route::get('/delete-to-cart/{rowId}',[CartController::class,'delete_to_cart']);
+Route::get('/del-product/{session_id}',[CartController::class,'delete_product']);
+Route::get('/del-all-product',[CartController::class,'delete_all_product']);
+
